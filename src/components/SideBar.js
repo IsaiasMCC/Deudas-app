@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
 import { FaMoneyBillWaveAlt } from 'react-icons/fa'
 import { FaUser, FaHistory } from 'react-icons/fa'
 import { MdPayment } from 'react-icons/md'
 import { TbNotes } from 'react-icons/tb'
 
 const SideBar = () => {
+  const location = useLocation();
   return (
     <div className="">
       <aside className="w-64" aria-label="Sidebar">
@@ -30,7 +32,7 @@ const SideBar = () => {
             </li> */}
             <li>
                 <Link to="/client"
-                    className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className={ location.pathname === "/client" ? "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white bg-gray-100 dark:bg-gray-700" : "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"}
                 > 
                 {/* <svg
                   aria-hidden="true"
@@ -47,7 +49,7 @@ const SideBar = () => {
             </li>
             <li>
                 <Link to="/payment"
-                    className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className={ location.pathname === "/payment" ? "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white bg-gray-100 dark:bg-gray-700" : "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"}
                 >
                 {/* <svg
                   aria-hidden="true"
@@ -65,7 +67,7 @@ const SideBar = () => {
             </li>
             <li>
                 <Link to="/debtconcept" 
-                    className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className={ location.pathname === "/debtconcept" ? "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white bg-gray-100 dark:bg-gray-700" : "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"}
                 >
                 {/* <svg
                   aria-hidden="true"
@@ -86,7 +88,7 @@ const SideBar = () => {
             </li>
             <li>
               <Link to="/debt"
-                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                className={ location.pathname === "/debt" ? "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white bg-gray-100 dark:bg-gray-700" : "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"}
               >
                 {/* <svg
                   aria-hidden="true"
@@ -109,7 +111,7 @@ const SideBar = () => {
             </li>
             <li>
               <Link to="/history"
-                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                className={ location.pathname === "/history" ? "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white bg-gray-100 dark:bg-gray-700" : "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"}
               >
                 {/* <svg
                   aria-hidden="true"

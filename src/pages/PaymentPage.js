@@ -15,7 +15,7 @@ const PaymentPage = () => {
   const [showModalDetail, setShowModalDetail] = useState(false);
 
   const [clientId, setClientId] = useState(0);
-  const [dateCreate, setDateCreate] = useState(Date.now());
+  const [dateCreate, setDateCreate] = useState(`${Date.now()}`);
   const [dateExpiration, setDateExpiration] = useState("");
   const [total, setTotal] = useState(0);
 
